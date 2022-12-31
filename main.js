@@ -32,8 +32,8 @@ function loadTrack(track_index){
 }
 function playpauseTrack(){
     isPlaying ? pauseTrack() : playTrack();
-    //sessionStorage.clear();
-    //localStorage.clear();
+    sessionStorage.clear();
+    localStorage.clear();
 }
 
 function playTrack(){
