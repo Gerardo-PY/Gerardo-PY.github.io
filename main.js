@@ -14,7 +14,7 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 
 const stream_list = [
     {
-        music : "http://freeuk21.listen2myradio.com:30243/;"
+        music : "http://freeuk27.listen2myradio.com:10914/;"
     }
 ];
 
