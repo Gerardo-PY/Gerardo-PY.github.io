@@ -7,7 +7,7 @@ let track_index = 0;
 let isPlaying = false;
 let updateTimer;
 
-/*get year and copyrigth data*/
+/*get year and copyrigth data*/ 
 var anio;
 anio = new Date().getFullYear();
 document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Villarrica";
