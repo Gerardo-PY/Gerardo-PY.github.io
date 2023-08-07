@@ -14,7 +14,7 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 
 const stream_list = [
     {
-        music : "https://reviews-easy-adjusted-supreme.trycloudflare.com/stream/;"
+        music : "https://reviews-easy-adjusted-supreme.trycloudflare.com/stream"
     }
 ];
 
@@ -51,8 +51,9 @@ function pauseTrack(){
     playpause_btn.innerHTML = '<i class="bi bi-play-circle"></i>';
 }
 function setVolume(){
-    curr_track.volume = 100;
+    curr_track.volume = 1;
 }
 function showStatus(text) {
     document.getElementById("playing").innerHTML = text;
 }
+
