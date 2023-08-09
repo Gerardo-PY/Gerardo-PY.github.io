@@ -14,7 +14,7 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 
 const stream_list = [
     {
-        music : "https://reviews-easy-adjusted-supreme.trycloudflare.com/stream/;"
+        music : "https://generating-whenever-tim-trivia.trycloudflare.com/stream/;"
     }
 ];
 
