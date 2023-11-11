@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radio Siete Villarrica</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/images/Icono del sitio - Radio 7.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/images/icono-sitio.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="player">
-        <div>
-            <img src="\images\logo_radio7_white.png" alt="logo_radio7_white">
-        </div>
-        <br>
-        <div class="title">¡Dale play y escuchanos!</div>
-        <br>
-        <div class="wrapper">
-            <div class="buttons">
-                 <div class="playpause-track" onclick="playpauseTrack()">
-                    <i class="bi bi-play-circle"></i>
-                 </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 cover-section">
+                <div class="centered-logo">
+                    <img src="/images/logo_radio_7.svg" alt="Logo Radio Siete" class="logo">
+                </div>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="player">
+            <div class="title">¡Dale play y escúchanos!</div>
+            <br>
+            <div class="wrapper d-flex justify-content-center align-items-center">
+                <div class="buttons">
+                    <div class="playpause-track" onclick="playpauseTrack()">
+                        <i class="bi bi-play-circle"></i>
+                    </div>
+                </div>
+            </div>
+            <br>
             <div id="wave">
                 <span class="stroke"></span>
                 <span class="stroke"></span>
@@ -33,14 +41,47 @@
                 <span class="stroke"></span>
                 <span class="stroke"></span>
                 <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>
+            <br>
+            <h5 class="songtitle" id="titleNowPlaying" style="color: #ffffff;"></h5>
+            <h5 class="songtitle font-weight-bold" id="song-info" style="color: #ffffff;"></h5>
+        </div>
+        <hr style="color: #ffffff;">
+        <div class="subtitle">Programación</div>
+        <br>    
+        <div class="row justify-content-center">
+            <div class="text-center">
+                <div id="imageSlider" class="carousel slide" data-ride="carousel" data-interval="5000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/program_la_zona_clasica.png" class="d-block w-100 mx-auto" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/program_ciudad_del_hierro.png" class="d-block w-100 mx-auto" alt="Imagen 2">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <br>
-        <h5 id="titleNowPlaying" style="color:#ffffff;"></p>
-        <h5 class="font-weight-bold" id="song-info" name="song-info" style="color: #ffffff;"></h4>
     </div>
+    <br>
     <script src="main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $('#imageSlider').carousel();
+
+        // Establece el intervalo de cambio de imagen a 5 segundos
+        setInterval(function() {
+            $('#imageSlider').carousel('next');
+        }, 10000);
+    </script>
     <footer class="footer"><p id="anio"></p></footer>
 </body>
 </html>

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right ,#1d689a, #08b1c7);
+    background: linear-gradient(to top ,#00568f, #001535);
     font-weight: bold;
     margin: 0;
     display: flex;
@@ -9,20 +9,28 @@ body {
     }
     
     .player{
-      min-height: 85vh;
+      min-height: 40vh;
       display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: center;
       margin-block: 1em;
   }
-    .wrapper{
-      border: 0px solid transparent;
-      padding: 30px;
+    /* .wrapper{ */
+      /* border: 0px solid transparent;
+      padding: 15px;
       border-radius: 20px;
-      background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(186, 229, 248));
+      background: linear-gradient(to bottom, rgb(0, 157, 224), rgb(0, 61, 141));
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+      /* border:5px solid white; */
+    /* } */
+    .wrapper {
+      border: 0px solid transparent;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom, rgb(0, 157, 224), rgb(0, 61, 141));
       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-      /* border:1px solid white; */
     }
 
     .buttons {
@@ -31,7 +39,7 @@ body {
     align-items: center;
     margin-bottom: 0px;
     font-size: 120px;
-    color: #42b3f4;
+    color: #ffffff;
     }
     
     .playpause-track {
@@ -45,11 +53,33 @@ body {
     }
 
     .title {
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 600;
       font-size: 2.5em;
       text-align: center;
       color: white;
       text-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 2.5em;
+      text-align: center;
+      color: white;
+      text-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
+      text-transform: uppercase;
+    }
+
+    .songtitle {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 1.5em;
+      text-align: center;
+      color: white;
+      text-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
+      text-transform: uppercase;
     }
     
     .footer {
@@ -74,23 +104,23 @@ body {
         margin: 0 5px;
         animation: animate 1.4s linear infinite;
     }
-      @keyframes animate {
-        50% {
-          height: 20%;
-          background: #4286f4;
-        }
-    
-        100% {
-          background: #42b3f4;
-          height: 100%;
-        }
+    @keyframes animate {
+      50% {
+        height: 15%;
+        background: #4286f4;
       }
+  
+      100% {
+        background: #42b3f4;
+        height: 100%;
+      }
+    }
 
-      .stroke:nth-child(1){
-          animation-delay: 0s;
-      }
-      .stroke:nth-child(2){
-        animation-delay: 0.3s;
+    .stroke:nth-child(1){
+        animation-delay: 0s;
+    }
+    .stroke:nth-child(2){
+      animation-delay: 0.3s;
     }
     .stroke:nth-child(3){
         animation-delay: 0.6s;
@@ -102,16 +132,57 @@ body {
         animation-delay: 1.3s;
     }
     .stroke:nth-child(6){
-        animation-delay: 0.9s;
+      animation-delay: 1.6s;
     }
     .stroke:nth-child(7){
-        animation-delay: 0.6s;
+      animation-delay: 1.9s;
     }
     .stroke:nth-child(8){
-        animation-delay: 0.3s;
+      animation-delay: 1.6s;
     }
     .stroke:nth-child(9){
+      animation-delay: 1.3s;
+    }
+    .stroke:nth-child(10){
+        animation-delay: 0.9s;
+    }
+    .stroke:nth-child(11){
+        animation-delay: 0.6s;
+    }
+    .stroke:nth-child(12){
+        animation-delay: 0.3s;
+    }
+    .stroke:nth-child(13){
         animation-delay: 0s;
     }
-    
 
+  .cover-section {
+    background-image: url('images/fondo-portada.png');
+    width: 100%;
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .centered-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    width: 400px;
+}
+
+.carousel-inner img {
+  max-width: 50%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner img {
+    max-width: 100%;
+    height: auto;
+  }
+}
