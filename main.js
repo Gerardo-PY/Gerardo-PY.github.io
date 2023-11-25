@@ -18,7 +18,7 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 const stream_list = [
     {
         //music : "https://s2.free-shoutcast.com/stream/18044/;"
-        music: "https://west-thursday-charles-attending.trycloudflare.com",
+        music: "https://serves-prepaid-turner-minimum.trycloudflare.com",
         mountPoint: "/stream"
     }
 ];
