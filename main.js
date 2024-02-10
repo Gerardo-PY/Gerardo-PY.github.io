@@ -18,7 +18,7 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 const stream_list = [
     {
         //music : "https://s2.free-shoutcast.com/stream/18044/;"
-        music: "https://serves-prepaid-turner-minimum.trycloudflare.com",
+        music: "https://colombia-flags-sewing-ann.trycloudflare.com",
         mountPoint: "/stream"
     }
 ];
