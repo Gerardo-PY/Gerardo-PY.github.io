@@ -18,7 +18,7 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 const stream_list = [
     {
         //music : "https://s2.free-shoutcast.com/stream/18044/;"
-        music: "https://teaching-philippines-somalia-everyday.trycloudflare.com",
+        music: "https://glory-drove-modern-periodically.trycloudflare.com",
         mountPoint: "/stream"
     }
 ];
