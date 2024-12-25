@@ -4,6 +4,7 @@ let wave = document.getElementById('wave');
 let curr_track = document.createElement('audio');
 let titleNowPlaying =document.getElementById('titleNowPlaying');
 let songInfo = document.getElementById('song-info');
+let liveIndicator = document.getElementById('liveIndicator');
 
 let track_index = 0;
 let isPlaying = false;
@@ -18,7 +19,9 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 const stream_list = [
     {
         //music : "https://s2.free-shoutcast.com/stream/18044/;"
-        music: "https://nicole-broad-ben-dramatically.trycloudflare.com",
+        // music: "https://nicole-broad-ben-dramatically.trycloudflare.com",
+        // mountPoint: "/stream"
+        music: "http://192.168.0.100:8000",
         mountPoint: "/stream"
     }
 ];
@@ -71,10 +74,10 @@ function getNowPlaying(){
     .then(response => response.json())
     .then(data => {
         const title = data.icestats.source.title;
-        titleNowPlaying.textContent = "Estás escuchando:";
-        songInfo.textContent = formatSongTitle(title) || "Información de la canción no disponible";
+        titleNowPlaying.textContent = "Estás escuchando:" || "";
+        songInfo.textContent = formatSongTitle(title) || "";
     })
-    .catch(error => {
+    .catch(error => {   
         console.error("Error al obtener los metadatos:", error);
     });
 }
