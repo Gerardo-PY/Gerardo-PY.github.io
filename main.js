@@ -18,7 +18,7 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 const stream_list = [
     {
         //music : "https://s2.free-shoutcast.com/stream/18044/;"
-        music: "https://ie-roads-gardens-provided.trycloudflare.com",
+        music: "https://applying-fixed-socks-representation.trycloudflare.com",
         mountPoint: "/stream"
     }
 ];
