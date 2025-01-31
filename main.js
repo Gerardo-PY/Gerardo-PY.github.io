@@ -4,6 +4,7 @@ let wave = document.getElementById('wave');
 let curr_track = document.createElement('audio');
 let titleNowPlaying =document.getElementById('titleNowPlaying');
 let songInfo = document.getElementById('song-info');
+let liveIndicator = document.getElementById('liveIndicator');
 
 let track_index = 0;
 let isPlaying = false;
@@ -71,10 +72,10 @@ function getNowPlaying(){
     .then(response => response.json())
     .then(data => {
         const title = data.icestats.source.title;
-        titleNowPlaying.textContent = "Estás escuchando:";
-        songInfo.textContent = formatSongTitle(title) || "Información de la canción no disponible";
+        titleNowPlaying.textContent = "Estás escuchando:" || "";
+        songInfo.textContent = formatSongTitle(title) || "";
     })
-    .catch(error => {
+    .catch(error => {   
         console.error("Error al obtener los metadatos:", error);
     });
 }

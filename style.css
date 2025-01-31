@@ -1,188 +1,432 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to top ,#00568f, #001535);
-    font-weight: bold;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    }
-    
-    .player{
-      min-height: 40vh;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      margin-block: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background: linear-gradient(to top ,#00568f, #001535); */
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/*sections bg */
+.playerSection {
+  /*background: linear-gradient(to top ,#00568f, #001535);*/
+  /* background: linear-gradient(to bottom ,#00568f, #001535); */
+  /* background-color:#012152; */
+  background: radial-gradient(circle,#012152, #000a1a);
+}
+
+.programationSection {
+  background-color: white;
+}
+
+
+.nosotrosSection {
+  background-color: #009fe3;
+}
+
+.contactSection {
+  /*background-color: #001120;*/
+  background-color: rgb(25, 25, 25);
+}
+
+@media (max-width: 576px) {
+  .contactSection .row > div {
+      margin-bottom: 1rem;
   }
-    /* .wrapper{ */
-      /* border: 0px solid transparent;
-      padding: 15px;
-      border-radius: 20px;
-      background: linear-gradient(to bottom, rgb(0, 157, 224), rgb(0, 61, 141));
-      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
-      /* border:5px solid white; */
-    /* } */
-    .wrapper {
-      border: 0px solid transparent;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: linear-gradient(to bottom, rgb(0, 157, 224), rgb(0, 61, 141));
-      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    }
-
-    .buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 0px;
-    font-size: 120px;
-    color: #ffffff;
-    }
+}
     
-    .playpause-track {
-    padding: 25px;
-    opacity: 0.8;
-    transition: opacity .2s;
-    }
+.player{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 130px;
+  color: #ffffff;
+}
     
-    .playpause-track:hover {
-    opacity: 1.0;
-    }
+.playpause-track {
+  padding: auto;
+  opacity: 0.8;
+  transition: opacity .2s;
+}
 
-    .title {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-weight: 600;
-      font-size: 2.5em;
-      text-align: center;
-      color: white;
-      text-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
-      text-transform: uppercase;
-    }
+.playpause-track:hover {
+  opacity: 1.0;
+}
 
-    .subtitle {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-weight: 300;
-      font-size: 2.5em;
-      text-align: center;
-      color: white;
-      text-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
-      text-transform: uppercase;
-    }
+.title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 2.5em;
+  text-align: center;
+  color: white;
+  text-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
 
-    .songtitle {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-weight: 300;
-      font-size: 1.5em;
-      text-align: center;
-      color: white;
-      text-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
-      text-transform: uppercase;
-    }
-    
-    .footer {
-      background: black;
-      padding: 0.5em 0;
-      color: white;
-      text-align: center;
-      margin-top: auto;
-    }
-    
-    .loader {
-      height: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .loader .stroke{
-        background: #f1f1f1;
-        height: 150%;
-        width: 10px;
-        border-radius: 50px;
-        margin: 0 5px;
-        animation: animate 1.4s linear infinite;
-    }
-    @keyframes animate {
-      50% {
-        height: 15%;
-        background: #4286f4;
-      }
-  
-      100% {
-        background: #42b3f4;
-        height: 100%;
-      }
-    }
+.subtitle {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 2.5em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
 
-    .stroke:nth-child(1){
-        animation-delay: 0s;
-    }
-    .stroke:nth-child(2){
-      animation-delay: 0.3s;
-    }
-    .stroke:nth-child(3){
-        animation-delay: 0.6s;
-    }
-    .stroke:nth-child(4){
-        animation-delay: 0.9s;
-    }
-    .stroke:nth-child(5){
-        animation-delay: 1.3s;
-    }
-    .stroke:nth-child(6){
-      animation-delay: 1.6s;
-    }
-    .stroke:nth-child(7){
-      animation-delay: 1.9s;
-    }
-    .stroke:nth-child(8){
-      animation-delay: 1.6s;
-    }
-    .stroke:nth-child(9){
-      animation-delay: 1.3s;
-    }
-    .stroke:nth-child(10){
-        animation-delay: 0.9s;
-    }
-    .stroke:nth-child(11){
-        animation-delay: 0.6s;
-    }
-    .stroke:nth-child(12){
-        animation-delay: 0.3s;
-    }
-    .stroke:nth-child(13){
-        animation-delay: 0s;
-    }
+.songtitle {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+  text-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
 
-  .cover-section {
-    background-image: url('images/fondo-portada.png');
-    width: 100%;
-    height: 380px;
-    background-size: cover;
-    background-position: center;
+.footer {
+  background: black;
+  padding: 0.5em 0;
+  color: white;
+  text-align: center;
+  margin-top: auto;
+}
+
+.loader {
+  margin-bottom: 5%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  scale: 130%;
+}
+
+.loader .stroke {
+  background: #f1f1f150;
+  height: 150%;
+  width: 8px; /* Ajustado el ancho a un valor menor */
+  border-radius: 5px;
+  margin: 0 3px; /* Ajustado el margen a un valor menor */
+  animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+  50% {
+    height: 15%;
+    background: #4286f450;
   }
 
-  .centered-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  100% {
+    background: #42b3f450;
     height: 100%;
+  }
 }
 
-.logo {
-    width: 400px;
+
+.stroke:nth-child(1){animation-delay: 0s;}
+.stroke:nth-child(2){animation-delay: 0.3s;}
+.stroke:nth-child(3){animation-delay: 0.6s;}
+.stroke:nth-child(4){animation-delay: 0.9s;}
+.stroke:nth-child(5){animation-delay: 1.3s;}
+.stroke:nth-child(6){animation-delay: 0.9s;}
+.stroke:nth-child(7){animation-delay: 0.6s;}
+.stroke:nth-child(8){animation-delay: 0.3s;}
+.stroke:nth-child(9){animation-delay: 0s;}
+.stroke:nth-child(10){animation-delay: 0.3s;}
+.stroke:nth-child(11){animation-delay: 0.6s;}
+.stroke:nth-child(12){animation-delay: 0.9s;}
+.stroke:nth-child(13){animation-delay: 1.3s;}
+.stroke:nth-child(14){animation-delay: 0.9s;}
+.stroke:nth-child(15){animation-delay: 0.6s;}
+.stroke:nth-child(16){animation-delay: 0.3s;}
+.stroke:nth-child(17){animation-delay: 0s;}
+.stroke:nth-child(18){animation-delay: 0.3s;}
+.stroke:nth-child(19){animation-delay: 0.6s;}
+.stroke:nth-child(20){animation-delay: 0.9s;}
+.stroke:nth-child(21){animation-delay: 1.3s;}
+.stroke:nth-child(22){animation-delay: 0.9s;}
+.stroke:nth-child(23){animation-delay: 0.6s;}
+.stroke:nth-child(24){animation-delay: 0.3s;}
+.stroke:nth-child(25){animation-delay: 0s;}
+.stroke:nth-child(26){animation-delay: 0.3s;}
+.stroke:nth-child(27){animation-delay: 0.6s;}
+.stroke:nth-child(28){animation-delay: 0.9s;}
+.stroke:nth-child(29){animation-delay: 1.3s;}
+.stroke:nth-child(30){animation-delay: 0.9s;}
+
+@media screen and (max-width: 600px) {
+  .loader .stroke {
+    width: 5px; 
+    margin: 0 2px;
+  }
 }
 
-.carousel-inner img {
-  max-width: 50%;
+.cover-section {
+  background-image: url('images/poster-radio.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  /* background-position: center; */
+}
+
+.navbar {
+  background-color: transparent;
+  padding: 10px;
+  color: white;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #001c36;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #bbbbbb;
+}
+
+.nav-link.active {
+  color: #00e1ff !important;
+}
+
+.navbar-brand img {
+  width: 150px;
   height: auto;
 }
 
-@media (max-width: 768px) {
-  .carousel-inner img {
-    max-width: 100%;
-    height: auto;
+.portada {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.portada img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portada-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.portada-title h1 {
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 769px) {
+  .portada-title h1 {
+      white-space: nowrap; /* Hace que el texto esté en una sola línea en pantallas más grandes */
   }
 }
+
+/* Añadir estilos responsivos para pantallas más pequeñas (varias líneas) */
+@media screen and (max-width: 768px) {
+  .portada-title h1 {
+      font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .portada-title h1 {
+      font-size: 1.0em;
+  }
+}
+
+.en-vivo {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1em; /* Ajusté el valor */
+  font-weight: bold;
+  color: transparent; /* Establecí el color inicial como transparente */
+  padding: 1px;
+  border-radius: 5px;
+  background-color: #ff0000;
+  position: relative;
+  animation: parpadeo 1.5s infinite; /* Ajusté la duración del parpadeo a 2 segundos, puedes cambiar este valor según tus preferencias */
+}
+
+@keyframes parpadeo {
+  0%, 100% {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+/* .carousel-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-caption {
+  text-align: left;
+  width: 70%;
+}
+
+.carousel-caption h2,
+.carousel-caption h4 {
+  color: #000000;
+  font-family: 'Montserrat', Arial, sans-serif;
+  text-align: left;
+}
+
+.carousel-caption h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.carousel-caption h4 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.carousel-inner img {
+  max-width: 100%;
+  max-height: 250px;
+  display: block;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: #000a1a;
+} */
+
+/* .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  margin-right: 20px;
+} */
+
+#carouselRadioPage {
+  max-width: 900px;
+  margin: auto;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 1%;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 250px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption {
+  width: 50%;
+  margin-left: auto;
+}
+
+.carousel-caption h2,
+.carousel-caption h4 {
+  color: #000000;
+  font-family: 'Montserrat', Arial, sans-serif;
+  text-align: left;
+  margin: 0;
+}
+
+.carousel-caption h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.carousel-caption h4 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    max-width: 70%;
+    max-height: 150px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+  }
+
+  .carousel-caption {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 100px;
+    box-sizing: border-box;
+  }
+
+  .carousel-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .carousel-caption h2,
+  .carousel-caption h4 {
+    font-size: small;
+  }
+
+  .navbar-brand img {
+    width: 90px;
+  }
+
+  .portada-title {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .portada-title h1 {
+    font-size: 1em;
+  }
+}
+
+
