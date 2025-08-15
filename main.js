@@ -19,7 +19,7 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 const stream_list = [
     {
         //music : "https://s2.free-shoutcast.com/stream/18044/;"
-        music: "https://texture-presently-wednesday-posting.trycloudflare.com",
+        music: "https://bookstore-biographies-fly-thanksgiving.trycloudflare.com",
         mountPoint: "/stream"
     }
 ];
