@@ -19,9 +19,9 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 const stream_list = [
     {
         //music : "https://s2.free-shoutcast.com/stream/18044/;"
-        music: "https://sapircast.caster.fm:14919",
-        mountPoint: "/urJJo",
-        token: "966d32a074da40be0b4f54218fd32198"
+        music: "https://halifax-dylan-council-material.trycloudflare.com",
+        mountPoint: "/stream",
+        token: ""
     }
 ];
 
@@ -31,7 +31,7 @@ showYear();
 function loadTrack(track_index){
     clearInterval(updateTimer);
 
-    curr_track.src = stream_list[track_index].music + stream_list[track_index].mountPoint + "?token=" +stream_list[track_index].token;
+    curr_track.src = stream_list[track_index].music + stream_list[track_index].mountPoint + stream_list[track_index].token;
     curr_track.load();
     setVolume();
 
