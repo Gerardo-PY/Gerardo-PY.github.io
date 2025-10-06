@@ -19,7 +19,7 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 const stream_list = [
     {
         //music : "https://s2.free-shoutcast.com/stream/18044/;"
-        music: "https://halifax-dylan-council-material.trycloudflare.com",
+        music: "https://detect-reno-occupations-stat.trycloudflare.com",
         mountPoint: "/stream",
         token: ""
     }
