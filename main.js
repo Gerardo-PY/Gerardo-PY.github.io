@@ -19,7 +19,7 @@ document.getElementById("anio").innerHTML = "&copy " + anio + " | Radio Siete Vi
 const stream_list = [
     {
         //music : "https://s2.free-shoutcast.com/stream/18044/;"
-        music: "https://communications-physiology-discusses-opposite.trycloudflare.com",
+        music: "https://want-animation-older-consecutive.trycloudflare.com",
         mountPoint: "/stream",
         token: ""
     }
